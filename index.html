@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arthashastra Cipher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="badge">SYMMETRIC CIPHER</div>
+      <h1>Arthashastra Inspired Cipher</h1>
+      <p class="subtitle">
+        Encrypt your plaintext with a secret key, then decrypt the ciphertext
+        with the correct key.
+      </p>
+
+      <div class="section">
+        <label for="plaintext">Plaintext</label>
+        <textarea id="plaintext" placeholder="Enter your message..."></textarea>
+      </div>
+
+      <div class="section">
+        <label for="encryptKey">Encryption Key</label>
+        <div class="input-row">
+          <input id="encryptKey" type="password" placeholder="Enter encryption key" />
+          <button class="small-btn" id="toggleEncryptKey" type="button">Show</button>
+        </div>
+      </div>
+
+      <button class="primary-btn" id="encryptBtn" type="button">Encrypt Message</button>
+
+      <div id="encryptStatus" class="status" aria-live="polite"></div>
+
+      <div class="divider"></div>
+
+      <div class="section">
+        <div class="label-row">
+          <label for="ciphertext">Encrypted Message (Base64)</label>
+          <button class="copy-btn" id="copyCipher" type="button">Copy</button>
+        </div>
+        <textarea id="ciphertext" readonly placeholder="Your encrypted message will appear here..."></textarea>
+      </div>
+
+      <div class="section">
+        <label for="decryptKey">Decryption Key</label>
+        <div class="input-row">
+          <input id="decryptKey" type="password" placeholder="Enter decryption key" />
+          <button class="small-btn" id="toggleDecryptKey" type="button">Show</button>
+        </div>
+      </div>
+
+      <button class="secondary-btn" id="decryptBtn" type="button">Decrypt Message</button>
+
+      <div id="decryptStatus" class="status" aria-live="polite"></div>
+
+      <div class="section">
+        <label for="decryptedText">Decrypted Message</label>
+        <textarea id="decryptedText" readonly placeholder="The original message will appear here..."></textarea>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
